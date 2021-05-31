@@ -4,6 +4,7 @@ import numpy as np
 from stdParams import *
 from src.neuronmodel import *
 from tqdm import tqdm
+import os
 
 from datetime import datetime
 
@@ -184,9 +185,11 @@ for mode in modes:
                 labels_samples[s,n,i,modes.index(mode),:] = output_list[k][2]
                 k += 1
 
+savefold = os.path.join(DATA_DIR,"classification_dimension_scaling_bcm/")
+if not os.path.exists(savefold):
+    os.makedirs(savefold)
 
-
-np.savez(os.path.join(DATA_DIR,"classification_dimension_scaling_bcm_high_input_dim/"
+np.savez(os.path.join(savefold
         +"classification_dimension_scaling_bcm_"
         +datetime.now().strftime("%d-%m-%y-%H:%M:%S")
         +".npz"),

@@ -4,6 +4,7 @@ import numpy as np
 from stdParams import *
 from src.neuronmodel import *
 from tqdm import tqdm
+import os
 
 from datetime import datetime
 
@@ -173,7 +174,11 @@ for mode in modes:
                 align_corrcoef[s,n,i,modes.index(mode)] = align_corrcoef_list[k]
                 k += 1
 
-np.savez(os.path.join(DATA_DIR,"correlation_dimension_scaling_high_input_dim/"
+savefold = os.path.join(DATA_DIR,"correlation_dimension_scaling/")
+if not os.path.exists(savefold):
+    os.makedirs(savefold)
+
+np.savez(os.path.join(savefold
         +"correlation_dimension_scaling_"
         +datetime.now().strftime("%d-%m-%y-%H:%M:%S")
         +".npz"),

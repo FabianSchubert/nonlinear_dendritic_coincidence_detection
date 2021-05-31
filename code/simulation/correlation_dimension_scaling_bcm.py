@@ -4,8 +4,8 @@ import numpy as np
 from stdParams import *
 from src.neuronmodel import *
 from tqdm import tqdm
-
 from datetime import datetime
+import os
 
 from multiprocessing import Pool
 
@@ -178,7 +178,11 @@ for mode in modes:
                 align_corrcoef[s,n,i,modes.index(mode)] = align_corrcoef_list[k]
                 k += 1
 
-np.savez(os.path.join(DATA_DIR,"correlation_dimension_scaling_bcm_high_input_dim/"
+savefold = os.path.join(DATA_DIR,"correlation_dimension_scaling_bcm/")
+if not os.path.exists(savefold):
+    os.makedirs(savefold)
+
+np.savez(os.path.join(savefold
         +"correlation_dimension_scaling_bcm_"
         +datetime.now().strftime("%d-%m-%y-%H:%M:%S")
         +".npz"),

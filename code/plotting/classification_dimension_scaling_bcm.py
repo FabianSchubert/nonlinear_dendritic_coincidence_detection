@@ -10,12 +10,12 @@ plt.style.use('mpl_style.mplstyle')
 import os
 import sys
 
-files = os.listdir(os.path.join(DATA_DIR,"classification_dimension_scaling_bcm_high_input_dim"))
+files = os.listdir(os.path.join(DATA_DIR,"classification_dimension_scaling_bcm"))
 
 data = []
 
 for file in files:
-    data.append(np.load(os.path.join(DATA_DIR,"classification_dimension_scaling_bcm_high_input_dim/"+file)))
+    data.append(np.load(os.path.join(DATA_DIR,"classification_dimension_scaling_bcm/"+file)))
 
 perf = []
 dim = []
@@ -85,7 +85,7 @@ colorbar(pc1)
 
 fig.tight_layout(h_pad=0.,w_pad=0.,pad=0.)
 
-fig.savefig(os.path.join(PLOT_DIR,"classification_dimension_scaling_bcm_high_input_dim.pdf"))
-fig.savefig(os.path.join(PLOT_DIR,"classification_dimension_scaling_bcm_high_input_dim.png"),dpi=600)
+fig.savefig(os.path.join(PLOT_DIR,"classification_dimension_scaling_bcm.pdf"))
+fig.savefig(os.path.join(PLOT_DIR,"classification_dimension_scaling_bcm.png"),dpi=600)
 
 plt.show()

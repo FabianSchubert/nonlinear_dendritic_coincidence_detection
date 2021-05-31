@@ -12,8 +12,8 @@ import sys
 
 plt.rc('text.latex', preamble=r'\renewcommand{\familydefault}{\sfdefault}')
 
-folders = ["correlation_dimension_scaling_high_input_dim"
-,"correlation_dimension_scaling_bcm_high_input_dim"]
+folders = ["correlation_dimension_scaling"
+,"correlation_dimension_scaling_bcm"]
 
 fig, ax = plt.subplots(2,3,gridspec_kw={'width_ratios': [1,1,1]}, figsize=(FIG_WIDTH,FIG_WIDTH*0.65))
 
@@ -109,7 +109,7 @@ for j in range(3):
         
     fig.tight_layout(h_pad=0.1,w_pad=0.1,pad=0.1)
 
-fig.savefig(os.path.join(PLOT_DIR,"corr_dimension_scaling_high_input_dim_composite.pdf"))
-fig.savefig(os.path.join(PLOT_DIR,"corr_dimension_scaling_high_input_dim_composite.png"),dpi=600)
+fig.savefig(os.path.join(PLOT_DIR,"corr_dimension_scaling_composite.pdf"))
+fig.savefig(os.path.join(PLOT_DIR,"corr_dimension_scaling_composite.png"),dpi=600)
 
 plt.show()

@@ -10,12 +10,12 @@ plt.style.use('mpl_style.mplstyle')
 import os
 import sys
 
-files = os.listdir(os.path.join(DATA_DIR,"classification_dimension_scaling_high_input_dim"))
+files = os.listdir(os.path.join(DATA_DIR,"classification_dimension_scaling"))
 
 data = []
 
 for file in files:
-    data.append(np.load(os.path.join(DATA_DIR,"classification_dimension_scaling_high_input_dim/"+file)))
+    data.append(np.load(os.path.join(DATA_DIR,"classification_dimension_scaling/"+file)))
 
 perf = []
 dim = []

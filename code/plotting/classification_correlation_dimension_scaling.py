@@ -10,12 +10,12 @@ plt.style.use('mpl_style.mplstyle')
 import os
 import sys
 
-files = os.listdir(os.path.join(DATA_DIR,"classification_dimension_scaling_high_input_dim"))
+files = os.listdir(os.path.join(DATA_DIR,"classification_dimension_scaling"))
 
 data = []
 
 for file in files:
-    data.append(np.load(os.path.join(DATA_DIR,"classification_dimension_scaling_high_input_dim/"+file)))
+    data.append(np.load(os.path.join(DATA_DIR,"classification_dimension_scaling/"+file)))
 
 perf = []
 Ip = []
@@ -103,7 +103,7 @@ colorbar(pc1)
 
 fig.tight_layout(h_pad=0.,w_pad=0.,pad=0.)
 
-fig.savefig(os.path.join(PLOT_DIR,"classification_correlation_dimension_scaling_high_input_dim.pdf"))
-fig.savefig(os.path.join(PLOT_DIR,"classification_correlation_dimension_scaling_high_input_dim.png"),dpi=600)
+fig.savefig(os.path.join(PLOT_DIR,"classification_correlation_dimension_scaling.pdf"))
+fig.savefig(os.path.join(PLOT_DIR,"classification_correlation_dimension_scaling.png"),dpi=600)
 
 plt.show()
