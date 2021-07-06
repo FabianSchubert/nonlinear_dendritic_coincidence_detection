@@ -16,6 +16,10 @@
 %\documentclass[utf8]{frontiersFPHY} % for Physics and Applied Mathematics and Statistics articles
 
 %\setcitestyle{square} % for Physics and Applied Mathematics and Statistics articles
+\usepackage{titlesec}
+\titlespacing*{\subsection}
+{0pt}{2.0ex plus 0.2ex minus 0.2ex}{1.0ex plus 0.1ex minus 0.1ex}
+
 \usepackage{url,hyperref,lineno,microtype,subcaption}
 \usepackage[onehalfspacing]{setspace}
 \linenumbers
@@ -754,7 +758,9 @@ distracting components in the proximal input
 space than a corresponding (one-compartment) point
 neuron.
 
-The apical and basal dentritic compartments of
+
+
+The apical and basal dendritic compartments of
 pyramidal neurons are located in different
 cortical layers \cite{park2019contribution},
 receiving top-down and feed-forward
@@ -763,6 +769,8 @@ compartments is hence the prime candidate
 for the realization of backpropagation in 
 multi-layered networks
 \citep{Bengio2014,Lee2015,Guerguiev2017}. 
+
+\subsection{Learning Targets by Maximizing Correlation}
 
 In the past, backpropagation algorithms 
 for pyramidal neurons concentrated on 
@@ -810,7 +818,16 @@ According to this principle, distal compartments should
 therefore only implicitly affect plasticity in basal 
 synapses, e.g.\ by facilitating spike initiation.
 
-Here we concentrated on one-dimensioal distal inputs.
+\subsection{Generalizability of the Model to Neuroanatomical
+Variabillity}
+
+While research on cortical circuits suggests the existence of
+generic and scalable principles that apply to different cortical
+regions and their functionality \citep{Douglas2007},
+
+\subsection{Outlook}
+
+Here we concentrated on one-dimensional distal inputs.
 For the case of higher-dimensional distal input 
 patterns, as for structured multi-layered networks,
 it thus remains to be investigated how target signals 

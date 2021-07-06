@@ -7,6 +7,9 @@
 \BOOKMARK [2][-]{subsection.3.1}{Unsupervised Alignment between Basal and Apical Inputs}{section.3}% 7
 \BOOKMARK [2][-]{subsection.3.2}{Supervised Learning in a Linear Classification Task}{section.3}% 8
 \BOOKMARK [1][-]{section.4}{Discussion}{}% 9
-\BOOKMARK [1][-]{section.5}{Appendix}{}% 10
-\BOOKMARK [2][-]{subsection.5.1}{Alignment in the Classificaction Task}{section.5}% 11
-\BOOKMARK [2][-]{subsection.5.2}{Objective Function of BCM Learning in the Compartment Model}{section.5}% 12
+\BOOKMARK [2][-]{subsection.4.1}{Learning Targets by Maximizing Correlation}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.2}{Generalizability of the Model to Neuroanatomical Variabillity}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.3}{Outlook}{section.4}% 12
+\BOOKMARK [1][-]{section.5}{Appendix}{}% 13
+\BOOKMARK [2][-]{subsection.5.1}{Alignment in the Classificaction Task}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.2}{Objective Function of BCM Learning in the Compartment Model}{section.5}% 15

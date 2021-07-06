@@ -1,0 +1,15 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Model}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Compartamental Neuron}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Homeostatic Parameter Regulation}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Synaptic Plasticity}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Results}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Unsupervised Alignment between Basal and Apical Inputs}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{Supervised Learning in a Linear Classification Task}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{Discussion}{}% 9
+\BOOKMARK [2][-]{subsection.4.1}{Learning Targets by Maximizing Correlation}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.2}{Generalizability of the Model to Neuroanatomical Variabillity}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.3}{Outlook}{section.4}% 12
+\BOOKMARK [1][-]{section.5}{Appendix}{}% 13
+\BOOKMARK [2][-]{subsection.5.1}{Alignment in the Classificaction Task}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.2}{Objective Function of BCM Learning in the Compartment Model}{section.5}% 15

@@ -1,0 +1,295 @@
+\begin{thebibliography}{34}
+\providecommand{\natexlab}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\selectlanguage}[1]{\relax}
+\providecommand{\bibAnnoteFile}[1]{%
+  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
+\providecommand{\bibAnnote}[2]{%
+  \begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ #2\end{quotation}}
+
+\bibitem[{Bengio(2014)}]{Bengio2014}
+Bengio, Y. (2014).
+\newblock {How Auto-Encoders Could Provide Credit Assignment in Deep Networks
+  via Target Propagation}
+\bibAnnoteFile{Bengio2014}
+
+\bibitem[{Bi and Poo(1998)}]{Bi1998}
+Bi, G.~Q. and Poo, M.~M. (1998).
+\newblock {Synaptic modifications in cultured hippocampal neurons: Dependence
+  on spike timing, synaptic strength, and postsynaptic cell type}.
+\newblock \emph{Journal of Neuroscience} 18, 10464--10472.
+\newblock \doi{10.1523/jneurosci.18-24-10464.1998}
+\bibAnnoteFile{Bi1998}
+
+\bibitem[{Bienenstock et~al.(1982)Bienenstock, Cooper, and
+  Munro}]{Bienenstock1982}
+Bienenstock, E.~L., Cooper, L.~N., and Munro, P.~W. (1982).
+\newblock {Theory for the development of neuron selectivity: Orientation
+  specificity and binocular interaction in visual cortex}.
+\newblock \emph{Journal of Neuroscience} 2, 32--48.
+\newblock \doi{10.1523/jneurosci.02-01-00032.1982}
+\bibAnnoteFile{Bienenstock1982}
+
+\bibitem[{Branco and H{\"{a}}usser(2011)}]{Branco2011}
+Branco, T. and H{\"{a}}usser, M. (2011).
+\newblock {Synaptic Integration Gradients in Single Cortical Pyramidal Cell
+  Dendrites}.
+\newblock \emph{Neuron} 69, 885--892.
+\newblock \doi{10.1016/j.neuron.2011.02.006}
+\bibAnnoteFile{Branco2011}
+
+\bibitem[{Clopath et~al.(2010)Clopath, B{\"{u}}sing, Vasilaki, and
+  Gerstner}]{Clopath2010}
+Clopath, C., B{\"{u}}sing, L., Vasilaki, E., and Gerstner, W. (2010).
+\newblock {Connectivity reflects coding: A model of voltage-based STDP with
+  homeostasis}.
+\newblock \emph{Nature Neuroscience} 13, 344--352.
+\newblock \doi{10.1038/nn.2479}
+\bibAnnoteFile{Clopath2010}
+
+\bibitem[{Debanne et~al.(1994)Debanne, G{\"{a}}hwiler, and
+  Thompson}]{Debanne1994}
+Debanne, D., G{\"{a}}hwiler, B.~H., and Thompson, S.~M. (1994).
+\newblock {Asynchronous pre- and postsynaptic activity induces associative
+  long-term depression in area CA1 of the rat hippocampus in vitro}.
+\newblock \emph{Proceedings of the National Academy of Sciences of the United
+  States of America} 91, 1148--1152.
+\newblock \doi{10.1073/pnas.91.3.1148}
+\bibAnnoteFile{Debanne1994}
+
+\bibitem[{Ebner et~al.(2019)Ebner, Clopath, Jedlicka, and Cuntz}]{Ebner2019}
+Ebner, C., Clopath, C., Jedlicka, P., and Cuntz, H. (2019).
+\newblock {Unifying Long-Term Plasticity Rules for Excitatory Synapses by
+  Modeling Dendrites of Cortical Pyramidal Neurons}.
+\newblock \emph{Cell Reports} 29, 4295--4307.e6.
+\newblock \doi{10.1016/j.celrep.2019.11.068}
+\bibAnnoteFile{Ebner2019}
+
+\bibitem[{Guerguiev et~al.(2017)Guerguiev, Lillicrap, and
+  Richards}]{Guerguiev2017}
+Guerguiev, J., Lillicrap, T.~P., and Richards, B.~A. (2017).
+\newblock {Towards deep learning with segregated dendrites}.
+\newblock \emph{eLife} 6.
+\newblock \doi{10.7554/eLife.22901}
+\bibAnnoteFile{Guerguiev2017}
+
+\bibitem[{Gustafsson et~al.(1987)Gustafsson, Wigstrom, Abraham, and
+  Huang}]{Gustafsson1987}
+Gustafsson, B., Wigstrom, H., Abraham, W.~C., and Huang, Y.~Y. (1987).
+\newblock {Long-term potentiation in the hippocampus using depolarizing current
+  pulses as the conditioning stimulus to single volley synaptic potentials}.
+\newblock \emph{Journal of Neuroscience} 7, 774--780.
+\newblock \doi{10.1523/jneurosci.07-03-00774.1987}
+\bibAnnoteFile{Gustafsson1987}
+
+\bibitem[{Haga and Fukai(2018)}]{Haga2018}
+Haga, T. and Fukai, T. (2018).
+\newblock {Dendritic processing of spontaneous neuronal sequences for
+  single-trial learning}.
+\newblock \emph{Scientific Reports} 8, 15166.
+\newblock \doi{10.1038/s41598-018-33513-9}
+\bibAnnoteFile{Haga2018}
+
+\bibitem[{H{\"{a}}rdle and Simar(2007)}]{Haerdle2007}
+H{\"{a}}rdle, W. and Simar, L. (2007).
+\newblock {Canonical Correlation Analysis}.
+\newblock In \emph{Applied Multivariate Statistical Analysis} (Berlin,
+  Heidelberg: Springer Berlin Heidelberg). 321--330.
+\newblock \doi{10.1007/978-3-540-72244-1\_14}
+\bibAnnoteFile{Haerdle2007}
+
+\bibitem[{H{\"{a}}usser et~al.(2000)H{\"{a}}usser, Spruston, and
+  Stuart}]{Hausser2000}
+[Dataset] H{\"{a}}usser, M., Spruston, N., and Stuart, G.~J. (2000).
+\newblock {Diversity and dynamics of dendritic signaling}.
+\newblock \doi{10.1126/science.290.5492.739}
+\bibAnnoteFile{Hausser2000}
+
+\bibitem[{Hay et~al.(2011)Hay, Hill, Sch{\"{u}}rmann, Markram, and
+  Segev}]{Hay2011}
+Hay, E., Hill, S., Sch{\"{u}}rmann, F., Markram, H., and Segev, I. (2011).
+\newblock {Models of Neocortical Layer 5b Pyramidal Cells Capturing a Wide
+  Range of Dendritic and Perisomatic Active Properties}.
+\newblock \emph{PLoS Computational Biology} 7, e1002107.
+\newblock \doi{10.1371/journal.pcbi.1002107}
+\bibAnnoteFile{Hay2011}
+
+\bibitem[{Intrator and Cooper(1992)}]{Intrator1992}
+Intrator, N. and Cooper, L.~N. (1992).
+\newblock {Objective function formulation of the BCM theory of visual cortical
+  plasticity: Statistical connections, stability conditions}.
+\newblock \emph{Neural Networks} 5, 3--17.
+\newblock \doi{10.1016/S0893-6080(05)80003-6}
+\bibAnnoteFile{Intrator1992}
+
+\bibitem[{Larkum(2013)}]{Larkum2013}
+[Dataset] Larkum, M. (2013).
+\newblock {A cellular mechanism for cortical associations: An organizing
+  principle for the cerebral cortex}.
+\newblock \doi{10.1016/j.tins.2012.11.006}
+\bibAnnoteFile{Larkum2013}
+
+\bibitem[{Larkum et~al.(2009)Larkum, Nevian, Sandier, Polsky, and
+  Schiller}]{Larkum2009}
+Larkum, M.~E., Nevian, T., Sandier, M., Polsky, A., and Schiller, J. (2009).
+\newblock {Synaptic integration in tuft dendrites of layer 5 pyramidal neurons:
+  A new unifying principle}.
+\newblock \emph{Science} 325, 756--760.
+\newblock \doi{10.1126/science.1171958}
+\bibAnnoteFile{Larkum2009}
+
+\bibitem[{Law and Cooper(1994)}]{Law1994}
+Law, C.~C. and Cooper, L.~N. (1994).
+\newblock {Formation of receptive fields in realistic visual environments
+  according to the Bienenstock, Cooper, and Munro (BCM) theory}.
+\newblock \emph{Proceedings of the National Academy of Sciences of the United
+  States of America} 91, 7797--7801.
+\newblock \doi{10.1073/pnas.91.16.7797}
+\bibAnnoteFile{Law1994}
+
+\bibitem[{Lee et~al.(2015)Lee, Zhang, Fischer, and Bengio}]{Lee2015}
+Lee, D.~H., Zhang, S., Fischer, A., and Bengio, Y. (2015).
+\newblock {Difference target propagation}.
+\newblock In \emph{Lecture Notes in Computer Science (including subseries
+  Lecture Notes in Artificial Intelligence and Lecture Notes in
+  Bioinformatics)} (Springer Verlag), vol. 9284, 498--515.
+\newblock \doi{10.1007/978-3-319-23528-8\_31}
+\bibAnnoteFile{Lee2015}
+
+\bibitem[{Letzkus et~al.(2006)Letzkus, Kampa, and Stuart}]{Letzkus2006}
+Letzkus, J.~J., Kampa, B.~M., and Stuart, G.~J. (2006).
+\newblock {Learning Rules for Spike Timing-Dependent Plasticity Depend on
+  Dendritic Synapse Location}.
+\newblock \emph{Journal of Neuroscience} 26, 10420--10429.
+\newblock \doi{10.1523/JNEUROSCI.2650-06.2006}
+\bibAnnoteFile{Letzkus2006}
+
+\bibitem[{Lillicrap et~al.(2016)Lillicrap, Cownden, Tweed, and
+  Akerman}]{Lillicrap2016}
+Lillicrap, T.~P., Cownden, D., Tweed, D.~B., and Akerman, C.~J. (2016).
+\newblock {Random synaptic feedback weights support error backpropagation for
+  deep learning}.
+\newblock \emph{Nature Communications} 7, 1--10.
+\newblock \doi{10.1038/ncomms13276}
+\bibAnnoteFile{Lillicrap2016}
+
+\bibitem[{Markram et~al.(1997)Markram, L{\"{u}}bke, Frotscher, and
+  Sakmann}]{Markram1997}
+Markram, H., L{\"{u}}bke, J., Frotscher, M., and Sakmann, B. (1997).
+\newblock {Regulation of synaptic efficacy by coincidence of postsynaptic APs
+  and EPSPs}.
+\newblock \emph{Science} 275, 213--215.
+\newblock \doi{10.1126/science.275.5297.213}
+\bibAnnoteFile{Markram1997}
+
+\bibitem[{Park et~al.(2019)Park, Papoutsi, Ash, Marin, Poirazi, and
+  Smirnakis}]{park2019contribution}
+Park, J., Papoutsi, A., Ash, R.~T., Marin, M.~A., Poirazi, P., and Smirnakis,
+  S.~M. (2019).
+\newblock Contribution of apical and basal dendrites to orientation encoding in
+  mouse v1 l2/3 pyramidal neurons.
+\newblock \emph{Nature communications} 10, 1--11
+\bibAnnoteFile{park2019contribution}
+
+\bibitem[{Poirazi(2009)}]{Poirazi2009}
+Poirazi, P. (2009).
+\newblock {Information processing in single cells and small networks: Insights
+  from compartmental models}.
+\newblock In \emph{AIP Conference Proceedings} (American Institute of Physics),
+  vol. 1108, 158--167.
+\newblock \doi{10.1063/1.3117124}
+\bibAnnoteFile{Poirazi2009}
+
+\bibitem[{Ramaswamy and Markram(2015)}]{Ramaswamy2015}
+[Dataset] Ramaswamy, S. and Markram, H. (2015).
+\newblock {Anatomy and physiology of the thick-tufted layer 5 pyramidal
+  neuron}.
+\newblock \doi{10.3389/fncel.2015.00233}
+\bibAnnoteFile{Ramaswamy2015}
+
+\bibitem[{Schiess et~al.(2016)Schiess, Urbanczik, and Senn}]{Schiess2016}
+Schiess, M., Urbanczik, R., and Senn, W. (2016).
+\newblock {Somato-dendritic Synaptic Plasticity and Error-backpropagation in
+  Active Dendrites}.
+\newblock \emph{PLoS Computational Biology} 12, 1004638.
+\newblock \doi{10.1371/journal.pcbi.1004638}
+\bibAnnoteFile{Schiess2016}
+
+\bibitem[{Schubert and Gros(2021)}]{schubert2021local}
+Schubert, F. and Gros, C. (2021).
+\newblock Local homeostatic regulation of the spectral radius of echo-state
+  networks.
+\newblock \emph{Frontiers in computational neuroscience} 15, 12
+\bibAnnoteFile{schubert2021local}
+
+\bibitem[{Shai et~al.(2015{\natexlab{a}})Shai, Anastassiou, Larkum, and
+  Koch}]{Shai2015}
+Shai, A.~S., Anastassiou, C.~A., Larkum, M.~E., and Koch, C.
+  (2015{\natexlab{a}}).
+\newblock {Physiology of Layer 5 Pyramidal Neurons in Mouse Primary Visual
+  Cortex: Coincidence Detection through Bursting}.
+\newblock \emph{PLOS Computational Biology} 11
+\bibAnnoteFile{Shai2015}
+
+\bibitem[{Shai et~al.(2015{\natexlab{b}})Shai, Anastassiou, Larkum, and
+  Koch}]{Shai_2015}
+Shai, A.~S., Anastassiou, C.~A., Larkum, M.~E., and Koch, C.
+  (2015{\natexlab{b}}).
+\newblock {Physiology of Layer 5 Pyramidal Neurons in Mouse Primary Visual
+  Cortex: Coincidence Detection through Bursting}.
+\newblock \emph{PLOS Computational Biology} 11
+\bibAnnoteFile{Shai_2015}
+
+\bibitem[{Sj{\"{o}}str{\"{o}}m and H{\"{a}}usser(2006)}]{Sjoestroem2006}
+Sj{\"{o}}str{\"{o}}m, P.~J. and H{\"{a}}usser, M. (2006).
+\newblock {A Cooperative Switch Determines the Sign of Synaptic Plasticity in
+  Distal Dendrites of Neocortical Pyramidal Neurons}.
+\newblock \emph{Neuron} 51, 227--238.
+\newblock \doi{10.1016/j.neuron.2006.06.017}
+\bibAnnoteFile{Sjoestroem2006}
+
+\bibitem[{Spruston(2008)}]{Spruston2008}
+Spruston, N. (2008).
+\newblock {Pyramidal neurons: dendritic structure and synaptic integration}.
+\newblock \emph{Nature Reviews Neuroscience} 9, 206--221.
+\newblock \doi{10.1038/nrn2286}
+\bibAnnoteFile{Spruston2008}
+
+\bibitem[{Spruston et~al.(1995)Spruston, Schiller, Stuart, and
+  Sakmann}]{Spruston1995}
+Spruston, N., Schiller, Y., Stuart, G., and Sakmann, B. (1995).
+\newblock {Activity-dependent action potential invasion and calcium influx into
+  hippocampal CA1 dendrites}.
+\newblock \emph{Science} 268, 297--300.
+\newblock \doi{10.1126/science.7716524}
+\bibAnnoteFile{Spruston1995}
+
+\bibitem[{Stuart and H{\"{a}}usser(2001)}]{Stuart2001}
+Stuart, G.~J. and H{\"{a}}usser, M. (2001).
+\newblock {Dendritic coincidence detection of EPSPs and action potentials}.
+\newblock \emph{Nature Neuroscience} 4, 63--71.
+\newblock \doi{10.1038/82910}
+\bibAnnoteFile{Stuart2001}
+
+\bibitem[{Urbanczik and Senn(2014)}]{Urbanczik2014}
+Urbanczik, R. and Senn, W. (2014).
+\newblock {Learning by the Dendritic Prediction of Somatic Spiking}.
+\newblock \emph{Neuron} 81, 521--528.
+\newblock \doi{10.1016/j.neuron.2013.11.030}
+\bibAnnoteFile{Urbanczik2014}
+
+\bibitem[{Weissenberger et~al.(2018)Weissenberger, Gauy, Lengler, Meier, and
+  Steger}]{Weissenberger2018}
+Weissenberger, F., Gauy, M.~M., Lengler, J., Meier, F., and Steger, A. (2018).
+\newblock {Voltage dependence of synaptic plasticity is essential for rate
+  based learning with short stimuli}.
+\newblock \emph{Scientific Reports} 8, 4609.
+\newblock \doi{10.1038/s41598-018-22781-0}
+\bibAnnoteFile{Weissenberger2018}
+
+\end{thebibliography}

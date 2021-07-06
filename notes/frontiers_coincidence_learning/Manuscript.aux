@@ -42,20 +42,20 @@
 \newlabel{eq_I_p}{{5}{3}{Compartamental Neuron}{equation.2.5}{}}
 \citation{schubert2021local}
 \citation{schubert2021local}
-\newlabel{sect_homeostasis}{{{2.2}}{4}{Homeostatic Parameter Regulation}{subsection.2.2}{}}
+\newlabel{sect_homeostasis}{{{2.2}}{4}{Homeostatic Parameter Regulation\label {sect_homeostasis}}{subsection.2.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {{2.2}}Homeostatic Parameter Regulation}{4}{subsection.2.2}\protected@file@percent }
-\newlabel{eq_b_p_dot}{{6}{4}{Homeostatic Parameter Regulation}{equation.2.6}{}}
-\newlabel{eq_b_d_dot}{{7}{4}{Homeostatic Parameter Regulation}{equation.2.7}{}}
+\newlabel{eq_b_p_dot}{{6}{4}{Homeostatic Parameter Regulation\label {sect_homeostasis}}{equation.2.6}{}}
+\newlabel{eq_b_d_dot}{{7}{4}{Homeostatic Parameter Regulation\label {sect_homeostasis}}{equation.2.7}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Model parameters, as defined in sections \ref  {sect:neuronmodel} and \ref  {sect_plasticity}.\relax }}{4}{table.caption.2}\protected@file@percent }
 \newlabel{tab_parameters}{{1}{4}{Model parameters, as defined in sections \ref {sect:neuronmodel} and \ref {sect_plasticity}.\relax }{table.caption.2}{}}
 \citation{Bienenstock1982,Intrator1992}
 \citation{Law1994}
-\newlabel{sect_plasticity}{{{2.3}}{5}{Synaptic Plasticity}{subsection.2.3}{}}
+\newlabel{sect_plasticity}{{{2.3}}{5}{Synaptic Plasticity\label {sect_plasticity}}{subsection.2.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {{2.3}}Synaptic Plasticity}{5}{subsection.2.3}\protected@file@percent }
-\newlabel{eq_hebb_plast}{{12}{5}{Synaptic Plasticity}{equation.2.12}{}}
-\newlabel{eq_tilde_x_p_i}{{13}{5}{Synaptic Plasticity}{equation.2.13}{}}
-\newlabel{eq_tilde_y}{{14}{5}{Synaptic Plasticity}{equation.2.14}{}}
-\newlabel{eq_bcm_rule}{{15}{5}{Synaptic Plasticity}{equation.2.15}{}}
+\newlabel{eq_hebb_plast}{{12}{5}{Synaptic Plasticity\label {sect_plasticity}}{equation.2.12}{}}
+\newlabel{eq_tilde_x_p_i}{{13}{5}{Synaptic Plasticity\label {sect_plasticity}}{equation.2.13}{}}
+\newlabel{eq_tilde_y}{{14}{5}{Synaptic Plasticity\label {sect_plasticity}}{equation.2.14}{}}
+\newlabel{eq_bcm_rule}{{15}{5}{Synaptic Plasticity\label {sect_plasticity}}{equation.2.15}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Results}{5}{section.3}\protected@file@percent }
 \newlabel{sect:results}{{3}{5}{Results}{section.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {{3.1}}Unsupervised Alignment between Basal and Apical Inputs}{5}{subsection.3.1}\protected@file@percent }
@@ -67,16 +67,20 @@
 \newlabel{fig_corr_dimension_scaling}{{3}{7}{{\bf Unsupervised Alignment between Basal and Apical Input.} Color encoded is the Pearson correlation $\rho [I_p,I_d]$ between the proximal and distal input currents, $I_p$ and $I_d$. A--C: Classical Hebbian plasticity, as defined by \eqref {eq_hebb_plast}. D--F: BCM rule, see \eqref {eq_bcm_rule}. Data for a range $N_{\rm dist}\in [0,N-1]$ of the orthogonal distraction directions, and scaling factors $s$, as defined in Fig.~\ref {fig_illustration_classification}. The overall number of basal inputs is $N=100$. In the bar plot on the right the sum $\Sigma _{\rm acc}$ over $s=0,\,0.5,\,1.0\,..$ of the results is shown as a function of $N_{\rm dist}$. Blue bars represents the compartment model, orange the point model.\relax }{figure.caption.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {{3.2}}Supervised Learning in a Linear Classification Task}{7}{subsection.3.2}\protected@file@percent }
 \newlabel{sect:classification}{{{3.2}}{7}{Supervised Learning in a Linear Classification Task}{subsection.3.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces {\bf  Binary Classification Accuracy.} Fraction of correctly classified patterns as illustrated in Fig.\nobreakspace  {}\ref  {fig_illustration_classification}, see Section\nobreakspace  {}\ref  {sect:classification}. A--C: Classical Hebbian plasticity. D--F: BCM rule. In the bar plot on the right the sum $\Sigma _{\rm  acc}$ over $s=0,\tmspace  +\thinmuskip {.1667em}0.5,\tmspace  +\thinmuskip {.1667em}1.0\tmspace  +\thinmuskip {.1667em}..$ of the results is given as a function of $N_{\rm  dist}$. Blue bars represents the compartment model, orange the point model.\relax }}{8}{figure.caption.5}\protected@file@percent }
-\newlabel{fig:classification_accuracy}{{4}{8}{{\bf Binary Classification Accuracy.} Fraction of correctly classified patterns as illustrated in Fig.~\ref {fig_illustration_classification}, see Section~\ref {sect:classification}. A--C: Classical Hebbian plasticity. D--F: BCM rule. In the bar plot on the right the sum $\Sigma _{\rm acc}$ over $s=0,\,0.5,\,1.0\,..$ of the results is given as a function of $N_{\rm dist}$. Blue bars represents the compartment model, orange the point model.\relax }{figure.caption.5}{}}
 \citation{Shai_2015}
 \citation{park2019contribution}
 \citation{Bengio2014,Lee2015,Guerguiev2017}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Discussion}{8}{section.4}\protected@file@percent }
 \citation{Haerdle2007}
 \citation{Haga2018}
 \citation{Clopath2010,Weissenberger2018}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Discussion}{9}{section.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces {\bf  Binary Classification Accuracy.} Fraction of correctly classified patterns as illustrated in Fig.\nobreakspace  {}\ref  {fig_illustration_classification}, see Section\nobreakspace  {}\ref  {sect:classification}. A--C: Classical Hebbian plasticity. D--F: BCM rule. In the bar plot on the right the sum $\Sigma _{\rm  acc}$ over $s=0,\tmspace  +\thinmuskip {.1667em}0.5,\tmspace  +\thinmuskip {.1667em}1.0\tmspace  +\thinmuskip {.1667em}..$ of the results is given as a function of $N_{\rm  dist}$. Blue bars represents the compartment model, orange the point model.\relax }}{9}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:classification_accuracy}{{4}{9}{{\bf Binary Classification Accuracy.} Fraction of correctly classified patterns as illustrated in Fig.~\ref {fig_illustration_classification}, see Section~\ref {sect:classification}. A--C: Classical Hebbian plasticity. D--F: BCM rule. In the bar plot on the right the sum $\Sigma _{\rm acc}$ over $s=0,\,0.5,\,1.0\,..$ of the results is given as a function of $N_{\rm dist}$. Blue bars represents the compartment model, orange the point model.\relax }{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{4.1}}Learning Targets by Maximizing Correlation}{9}{subsection.4.1}\protected@file@percent }
+\citation{Douglas2007}
 \citation{Lillicrap2016,Guerguiev2017}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{4.2}}Generalizability of the Model to Neuroanatomical Variabillity}{10}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {{4.3}}Outlook}{10}{subsection.4.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {5}Appendix}{10}{section.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {{5.1}}Alignment in the Classificaction Task}{10}{subsection.5.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces {\bf  Alignment between Basal and Apical Input after Binary Classification Learning.} Correlation between proximal and distal inputs after training, as described in Sect.\nobreakspace  {}\ref  {sect:classification}. A--C: Classical Hebbian plasticity. D--F: BCM rule. In the bar plot on the right the sum $\Sigma _{\rm  acc}$ over $s=0,\tmspace  +\thinmuskip {.1667em}0.5,\tmspace  +\thinmuskip {.1667em}1.0\tmspace  +\thinmuskip {.1667em}..$ of the results is shown as a function of $N_{\rm  dist}$. Blue bars represents the compartment model, orange the point model.\relax }}{11}{figure.caption.6}\protected@file@percent }
