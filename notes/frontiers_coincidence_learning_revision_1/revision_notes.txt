@@ -1,0 +1,47 @@
+## Reviewer 1
+
+Q5:
+
+We took the suggested publications into considerations and added a section in
+the discussion addressing the role of neural variability,
+see Sect. 4.2.
+
+## Reviewer 2
+
+- We ran a spell checker.
+
+- L. 57: We replaced "subsuming" with "representing".
+
+- L. 58-74: We extended the explanation regarding the motivation
+            of our neuron model, including the input currents
+            and the overall time scale.
+
+- Figure 1: Fixed the typo and modified the explanation regarding alpha.
+
+- L. 77: changed "viz" to "that is"
+
+- L. 87-89: Referenced the respective protocols for x_d
+
+- L. 96-106: We added further explanations regarding our choice of the target
+    means of I_p and I_d.
+
+- L. 96-98: By "averaging out", we wanted to stress the fact that I_p and I_d
+        will be zero on average over time, while fluctuations are still present.
+        We hope that the changes make this more clear.
+        
+- L. 111-120: We further explained the more general idea of dual homeostasis,
+            offering a potential explanation for the issue of calculating
+            squared membrane potentials.
+
+- L. 130-137: Discussed the averaging time scale of the Hebbian rule.
+
+- L. 190: (0,1)^N -> each entry drawn uniformly from [0,1].
+
+- L. 192: "random Gaussian variables" -> Gaussian random variables.
+
+- L. 211: "to the halfway point" -> to the point halfway between
+
+- L. 222: "The workhorse of the brain, pyramidal neurons,
+        possess" -> Pyramidal neurons in the brain
+        possess
+- L. Capitalized "German Research Foundation"

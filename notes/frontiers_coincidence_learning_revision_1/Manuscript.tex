@@ -137,7 +137,7 @@ rate that is maximally achievable under basal synaptic input alone,
 therefore representing a form of temporal coincidence
 detection between apical and basal input.
 
-Naturally, these mechanisms also affect plasticity and thus learning
+Naturally, these mechanisms also affect plasticity, and thus learning
 within the cortex \citep{Sjoestroem2006,Ebner2019}. 
 While the interplay between basal and apical stimulation and
 its effect on synaptic efficacies is subject to ongoing research, 
@@ -146,7 +146,7 @@ towards long-term potentiation (LTP) \citep{Letzkus2006}.
 Thus, coincidence between basal and apical input appears 
 to also gate synaptic plasticity.
 
-In a supervised learning scheme, where the top down input
+In a supervised learning scheme, where the top-down input
 arriving at the apical compartment acts as the teaching signal,
 the most straight-forward learning rule for the basal synaptic
 weights would be derived from an appropriate loss function,
@@ -164,8 +164,8 @@ is---to our knowledge---yet to be found.
 On the other hand, Hebbian-type plasticity is extensively
 documented in experiments 
 \citep{Gustafsson1987,Debanne1994,Markram1997,Bi1998}. 
-Therefore, our work is based on the question whether the 
-non-linear interactions between basal and apical synaptic input could, 
+Therefore, our work is based on the question of whether the 
+nonlinear interactions between basal and apical synaptic input could, 
 when combined with a Hebbian plasticity rule, allow a neuron
 to learn to reproduce an apical teaching signal in its
 proximal input.
@@ -176,7 +176,7 @@ generates the output firing rate as a function
 of two streams of synaptic input (subsuming basal 
 and apical inputs) with classical Hebbian, as well as 
 BCM-like plasticity rules on basal synapses. 
-In particular we hypothesized that this combination of neural 
+In particular, we hypothesized that this combination of neural 
 activation and plasticity rules would lead to an
 increased correlation between basal and apical inputs.
 Furthermore, the temporal alignment observed in our study 
@@ -201,11 +201,11 @@ similar plasticity rules.
 The neuron model used throughout this study 
 is a discrete-time rate encoding model that 
 contains two separate input variables, 
-subsuming the total synaptic input current injected arriving 
+representing the total synaptic input current injected arriving 
 at the basal (proximal) and apical (distal) 
 dendritic structure of a pyramidal neuron, respectively. 
 The model is a slightly simplified version of a phenomenological 
-model proposed by \citet{Shai_2015}. Denoting the input currents 
+model proposed by \citet{Shai2015}. Denoting the input currents 
 $I_p$ (proximal) and $I_d$ (distal), 
 the model is written as
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -222,7 +222,41 @@ y\left(t\right) &= \alpha  \sigma\left( I_p(t) - \theta_{p0} \right)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Here, $\theta_{p0}>\theta_{p1}$ and $\theta_d$ 
 are threshold variables with respect to proximal 
-and distal inputs. Overall, equation 
+and distal inputs. 
+Equation (\ref{eq_comp_model}) defines the firing
+rate $y$ as a function of $I_p$ and $I_d$. Note that
+the firing rate is normalized to take values within
+$y \in [0,1]$. In the publication by \citet{Shai2015},
+firing rates varied between $0$ and $150\,\mathrm{Hz}$.
+High firing rates typically appear in the form of bursts
+of action potentials, lasting on the order of $50$--$100 \, \mathrm{ms}$
+\cite{Larkum1999,Shai2015}. Therefore, since our model represents
+``instantaneous" firing rate responses to a discrete set of static
+input patterns, we conservatively estimate the time scale
+of our model to be on the order of tenths of seconds.
+ 
+In general, the input currents $I_p$ and $I_d$ are meant
+to comprise both excitatory and potential inhibitory
+currents. Therefore, we did not restrict the sign of
+of $I_p$ and $I_d$ to positive values. Moreover, since
+we chose the thresholds $\theta_{p0}$ and $\theta_{d}$
+to be zero, $I_p$ and $I_d$ should be rather seen as
+a total external input relative to intrinsic firing
+thresholds.
+
+Note that the original form of this phenomenological
+model by \citet{Shai2015} is of the form
+\begin{equation}
+	y(I_p, I_d) = \sigma\left( I_p - A \sigma(I_d) \right)\left[1 + B \sigma(I_d)\right] \; ,
+\end{equation}
+where $\sigma$ denotes the same sigmoidal activation function. This equation
+illustrates that $I_d$ has two effects: It shifts the basal activation threshold
+by a certain amount (here controlled by the parameter $A$) and also multiplicatively
+increases the maximal firing rate (to an extent controlled by $B$). Our equation
+mimics these effects by means of the two thresholds $\theta_{p0}$ and $\theta_{p1}$, as well
+as the value of $\alpha$ relative to the maximal value of y (which is $1$ in our case).
+
+Overall, equation 
 (\ref{eq_comp_model}) describes two distinct
 regions of neural activation in the 
 $(I_p, I_d)$-space which differ in their
@@ -232,7 +266,7 @@ A plot of \eqref{eq_comp_model} is shown
 in Fig.~\ref{fig_comp_model}.
 
 When both input currents $I_d$ and $I_p$ 
-are large, viz larger than the 
+are large, that is, larger than the 
 thresholds $\theta_d$ and $\theta_{p1}$,
 the second term in \eqref{eq_comp_model}
 dominates, which leads to $y\approx 1$. 
@@ -260,13 +294,15 @@ inputs $I_p$ and $I_d$,
 see \eqref{eq_comp_model}. 
 The thresholds $\theta_{p0}$, $\theta_{p1}$ and 
 $\theta_d$ define two regions of neural activity,
-with a a maximal firing rate of unity an a plateau
-at $\alpha=0.3$.}
+with a maximal firing rate of $1$ and a plateau
+in the lower-left quadrant with a value of $\alpha=0.3$. That is,
+the latter region can achieve $30\%$ of the maximal firing rate.
+}
 \label{fig_comp_model}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In our numerical experiments we compare 
+In our numerical experiments, we compare 
 the compartment model with a classical point 
 neuron, as given by
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -277,7 +313,7 @@ y(t) = \sigma\left(I_p(t) + I_d(t) -
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The apical input $I_d$ is generated
-`as is', meaning, it is not dynamically 
+`as is', meaning it is not dynamically 
 calculated as a superposition of multiple 
 presynaptic inputs. For concreteness, we
 used
@@ -288,8 +324,13 @@ I_d(t) = n_d(t) x_d(t) - b_d(t) \; ,
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 where $n_d(t)$ is a scaling factor, $x_d(t)$ 
-a pre-generated discrete time sequence and 
-$b_d(t)$ a bias. Note that $n_d$ and $b_d$ 
+a discrete time sequence, which represents the target
+signal to be predicted by the proximal input, and 
+$b_d(t)$ a bias. In our experiments, we chose $x_d$ 
+according to the prediction task at hand, see 
+(\ref{eq_x_d_a}) and (\ref{eq:bin_targ_0})--(\ref{eq:bin_targ_1}).
+
+Note that $n_d$ and $b_d$ 
 are time dependent since they are subject 
 to adaptation processes, which will be
 described in the next section. Similarly, 
@@ -315,7 +356,7 @@ are presented in Table~\ref{tab_parameters}.
 
 The bias variables entering the definitions
 \eqref{eq_I_d} and \eqref{eq_I_p} of the distal
-proximal currrent, $I_d$ and $I_p$, 
+proximal current, $I_d$ and $I_p$, 
 are assumed to adapt according to
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{align}
@@ -326,15 +367,34 @@ b_d(t+1) &= b_d(t) + \mu_b \left[I_d(t) - I_d^t\right] \;,
 \end{align}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 where $I_p^t=0$ and, $I_d^t=0$
-are preset targets and $1/\mu_b=10^3$ the
-timescale for the adaption process. Over
-time, both the distal and the proximal 
-currents, $I_d$ and $I_p$, average out.
+are preset targets and $1/\mu_b=10^3$ is the
+timescale for the adaption. 
+Since this is a slow process, over time, 
+both the distal and the proximal 
+currents, $I_d$ and $I_p$, will approach a temporal mean
+equal to $I_p^t$ and $I_d^t$ respectively while still allowing the input
+to fluctuate.
+The reason for choosing  the targets to be
+zero lies in the fact that we expect a neuron
+to operate in a dynamical regime that can reliably
+encode information from its inputs. In the
+case of our model, this implies that neural
+input should be distributed close to the threshold (which
+was set to zero in our case),
+such that fluctuations in the can have an effect
+on the resulting neural activity. See e.g.\ \citet{Bell_1995} and
+\citet{Triesch_2007} for theoretical approaches to 
+optimizing gains and biases based on input and output statistics.
+Hence, while we chose the mean targets of the input to be
+the same as the thresholds, this is not a strict condition,
+as relevant information in the input could also be present in
+parts of the input statistics that significantly differ from its
+actual mean (for example in the case of a heavily skewed distribution).
 
 Adaptation rules for the bias entering a 
 transfer function, such as
 \eqref{eq_b_d_dot} and \eqref{eq_b_p_dot},
-have the task to regulate overall activitiy
+have the task to regulate overall activity
 levels. The overall magnitude of the
 synaptic weights, which are determined by 
 synaptic rescaling factors, here $n_d$ and $n_p$, 
@@ -349,20 +409,40 @@ n_d(t+1) &= n_d(t) +
 \mu_n \left[V_d^t - \left( I_d(t) - \tilde{I}_d(t)\right)^2\right] \\
 n_p(t+1) &= n_p(t) + 
 \mu_n \left[V_p^t - \left( I_p(t) - \tilde{I}_p(t)\right)^2\right] \\
-\tilde{I}_d(t+1) &= (1-\mu_{\rm av})\tilde{I}_d(t) + \mu_{\rm av} I_d(t) \\
-\tilde{I}_p(t+1) &= (1-\mu_{\rm av})\tilde{I}_p(t) + \mu_{\rm av} I_p(t) 
+\tilde{I}_d(t+1) &= (1-\mu_{\rm av})\tilde{I}_d(t) + \mu_{\rm av} I_d(t) \label{eq:gain_d} \\
+\tilde{I}_p(t+1) &= (1-\mu_{\rm av})\tilde{I}_p(t) + \mu_{\rm av} I_p(t) \; . \label{eq:gain_p}
 \end{align}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Here, $V_p^t$ and $V_p^t$ define targets for 
-the temporal averaged variances of $I_p$ 
+the temporally averaged variances of $I_p$ 
 and $I_d$.  
 The dynamic variables $\tilde{I}_p$ and $\tilde{I}_d$ 
 are simply low-pass filtered running averages of 
 $I_p$ and $I_d$. Overall, the framework
 specified here allows the neuron to be fully flexible,
-as long as the activtiy level and its variance 
+as long as the activity level and its variance 
 fluctuate around preset target values 
-\citep{schubert2021local}. A list of 
+\citep{schubert2021local}. 
+
+Mapping the control of the mean input current to the
+biases and the control of variance to the gains is, in a sense,
+an idealized case of the more general notion of dual homeostasis.
+As shown by \citet{cannon2017stable}, the conditions for 
+a successful control of mean and variance by means of gains and
+biases are relatively loose: Under certain stability conditions,
+a combination of two nonlinear functions of the variable that is
+to be controlled can yield a dynamic fixed point associated with
+a certain mean and variance. In fact, a possible variant of dual
+homeostasis could potentially be achieved by coupling the input
+gains to a certain firing rate (which is a non-linear function
+of the input), while biases are still adjusted to a certain mean
+input. This, of course, would make it harder to predict the
+variance of the input resulting from such an adaptation, since
+it would not enter the equations as a simple parameter that can
+be chosen a priori (as it is the case for equation (\ref{eq:gain_d}) and
+(\ref{eq:gain_p})).
+
+A list of 
 the parameter values used throughout this investigation 
 is also given in Table~\ref{tab_parameters}. Our choices of
 target means and variances are based on the assumption
@@ -413,21 +493,38 @@ w_i(t+1) &= w_i(t) + \mu_w
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The trailing time averages $\tilde{x}_{p,i}$ and
 $\tilde{y}$, respectively of the presynaptic 
-basal activites, $x_{p,i}$, and of the neural
-firing rate $y$, enter the Hebbian learing
+basal activities, $x_{p,i}$, and of the neural
+firing rate $y$, enter the Hebbian learning
 rule (\ref{eq_hebb_plast}) as reference levels.
 Pre- and post-synaptic neurons are considered
 to be active/inactive when being above/below
-the respective trailing averages. The
-timescale of the averaging, $1/\mu_{\rm av}$,
-is typcially over 200 time steps, see
-Table~\ref{tab_parameters}.
+the respective trailing averages. 
+This is a realization of the Hebbian rule
+proposed by \citet{Linsker1986}.
+The timescale of the averaging, $1/\mu_{\rm av}$,
+is 200 time steps, see
+Table~\ref{tab_parameters}. As discussed in 
+Section \ref{sect:neuronmodel}, a time step can be
+considered to be on the order of $100 \, \mathrm{ms}$, which
+equates to an averaging time of about $20 \, \mathrm{s}$.
+Generally, this is much faster than the timescales
+on which metaplasticity, i.e.\, adaptation processes
+affecting the dynamics of synaptic plasticity itself,
+are believed to take place, which are on the
+order of days \citep{Yger2015}. However, it should
+be noted that our choice of the timescale of the 
+averaging process used in our plasticity model is 
+motivated mostly by considerations regarding the overall 
+simulation time: Given enough update steps, the same
+results could be achieved by an arbitrarily slow
+averaging process.
+
 Since classical Hebbian learning does not keep
 weights bounded, we use an additional proportional decay
 term $\epsilon w_i$ which prevents runaway
 growth using $\epsilon = 0.1$.
 With $1/\mu_w=2\cdot10^4$, learning is 
-assumed to be be considerably slower, 
+assumed to be considerably slower, 
 as usual for statistical update rules.
 For comparative reasons, the point neuron 
 model (\ref{eq_point_neuron}) is equipped 
@@ -460,7 +557,7 @@ indefinitely.
 However, for our compartment model, we chose to explicitly set the
 threshold to be the mean value between the high- and low-activity regime
 in our compartment model, i.e.\ $\theta_M = (1+\alpha)/2$. By doing so, LTP is
-preferably induced if both basal and apical input are present at the same
+preferably induced if both basal and apical input is present at the same
 time.
 Obviously, for the point model, the reasoning behind our choice of
 $\theta_M$ did not apply. Still, to provide some level of comparability,
@@ -492,12 +589,12 @@ classification hyperplane, as defined by \eqref{eq_x_d_a}.}
 
 As a first test, we quantify the neuron's ability to 
 align its basal input to the apical teaching signal.
-This can be done using the pearson correlation coefficient
+This can be done using the Pearson correlation coefficient
 $\rho[I_p,I_d]$ between the basal and 
 apical input currents. We determined 
 $\rho[I_p,I_d]$ after the simulation,
 which involves all plasticity mechanisms, both
-for the synaptic weights and for the intrinsic 
+for the synaptic weights and the intrinsic 
 parameters. The input sequences $x_{p,i}(t)$ 
 is randomly drawn from a uniform distribution,
 in $[0,1]$, which is done independently for 
@@ -527,7 +624,7 @@ is a distraction for the plasticity. The
 observed temporal alignment between $I_p$ and 
 $I_d$ should hence suffer when such a 
 distraction is present. 
-%The situaton is illustrated 
+%The situation is illustrated 
 %in Fig.~\ref{fig_illustration_classification}.
 
 In order to test the effects of distracting directions,
@@ -576,12 +673,12 @@ the compartment model, orange the point model.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The overall aim of our portocal is to evaluate
+The overall aim of our protocol is to evaluate
 the degree $\rho[I_p,I_d]$ to which
 the proximal current $I_p$ aligns in the
 temporal domain to the distal input $I_d$.
 We recall that this is a highly non-trivial
-question, given that the proximal synpatic
+question, given that the proximal synaptic
 weights are adapted via Hebbian plasticity, 
 see \eqref{eq_hebb_plast}. The error 
 $(I_p-I_d)^2$ does not
@@ -592,16 +689,13 @@ as a function of the distraction parameters
 $s$ and $N_{\rm dist}\in[0,N-1]$. The
 total number of basal inputs is $N=100$.
 
-For a comparison, in 
+For comparison, in 
 Fig.~\ref{fig_corr_dimension_scaling}
 data for both the compartment model
 and for a point neuron are presented
 (as defined respectively by \eqref{eq_comp_model}
-and \eqref{eq_point_neuron}), as well as results for both 
-classical Hebbian and BCM learning rules. A decorrelation 
-transition as a function of the distraction 
-scaling paramerer $s$ is observed for both 
-models and plasticity rules. In terms of the learning rules,
+and \eqref{eq_point_neuron}), as well as results for both
+classical Hebbian and BCM learning rules. A decorrelation transition as a function of the distraction scaling parameter $s$ is observed for both models and plasticity rules. In terms of the learning rules,
 only marginal differences are present. 
 However, the compartment model is able
 to handle a significantly stronger distraction 
@@ -630,11 +724,11 @@ input is generated from,
 \zeta_{dist,i}(t) \mathbf{v}_{{\rm dist},i} \; ,
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-where $\mathbf{b}$ is a random vector drawn uniformly from
-$(0,1)^N$, $\mathbf{a}$ is random unit vector as introduced in 
+where $\mathbf{b}$ is a random vector, where each entry is drawn uniformly from
+$[0,1]$, $\mathbf{a}$ is random unit vector as introduced in 
 Section~\ref{sect:alignment}, $c(t)$ is a binary variable drawn 
 from $\{-0.5,0.5\}$ with equal probability and $\zeta_a(t)$ and the
-$\zeta_{dist,i}(t)$ are independent random Gaussian variables with 
+$\zeta_{dist,i}(t)$ are independent Gaussian random variables with 
 zero mean and unit variance. 
 Hence, $\sigma_a$ simply denotes the standard deviation of each Gaussian
 cluster along the direction of the normal vector $\mathbf{a}$ and was
@@ -660,17 +754,16 @@ scheme,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{align}
 x_{d,0}(t) &= 1 - \Theta\left( \left(\mathbf{x}_p(t) - 
-\mathbf{b}\right)^T \mathbf{a}\right) \\
+\mathbf{b}\right)^T \mathbf{a}\right) \label{eq:bin_targ_0}\\
 x_{d,1}(t) &= \Theta\left( \left(\mathbf{x}_p(t) - 
-\mathbf{b}\right)^T \mathbf{a}\right) \; ,
+\mathbf{b}\right)^T \mathbf{a}\right) \; , \label{eq:bin_targ_1}
 \end{align}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 where $\Theta(x)$ is the Heaviside step function.
 
-As in the previous experiment, we ran a full simulation until 
-all dynamic variables reached a stationary state. After this,
+As in the previous experiment, we ran a full simulation until all dynamic variables reached a stationary state. After this,
 a test run without plasticity and with the apical input turned off 
-was used to evaluate the classification	performance. 
+was used to evaluate the classification performance. 
 For each sample, the index of the neuron with the highest 
 activity was used as the predicted class. 
 Accuracy was then calculated as the fraction
@@ -706,15 +799,13 @@ the case of the BCM rule (\ref{eq_bcm_rule}), in
 particular when the overall accuracies for the 
 tested parameter range are compared, see 
 Fig.~\ref{fig:classification_accuracy}D.
-This indicates that the compartmental neuron
-makes better use, during learing, of the
-three distinct activity plateaus at
-$0$, $\alpha$ and $1$, when the BCM
-rule is at work. Compare
+This indicates that during learning, the compartmental neuron
+makes better use,  of the three distinct activity plateaus at
+$0$, $\alpha$ and $1$, when the BCM rule is at work. Compare
 Fig.~\ref{fig_comp_model}. We point
 out in this respect that the sliding 
 threshold $\theta_M$ in (\ref{eq_bcm_rule}) 
-has been set to the half-way point between
+has been set to the point halfway between
 the two non-trivial activity levels,
 $\alpha$ and $1$. 
 
@@ -744,13 +835,13 @@ additional external input.
 %---------------------------------------%
 
 
-The workhorse of the brain, pyramidal neurons,
+Pyramidal neurons in the brain
 possess distinct apical/basal (distant/proximal)
 dendritic trees. It is hence likely that models
 with at least two compartments are necessary for
 describing the functionality of pyramidal neurons.
 For a proposed two-compartment transfer function
-\citep{Shai_2015},
+\citep{Shai2015},
 we have introduced both unsupervised and supervised 
 learning schemes, showing that the two-compartment
 neuron is significantly more robust against 
@@ -776,20 +867,20 @@ In the past, backpropagation algorithms
 for pyramidal neurons concentrated on 
 learning rules that are explicitly dependent 
 on an error term, typically the difference 
-between top-down and bottom up signals.
+between top-down and bottom-up signals.
 In this work, we considered an alternative 
 approach. We postulate that the correlation 
 between proximal and distal input constitutes
 a viable objective function, which is to be
 maximized in combination with homeostatic 
-adaptation rules that keeps proximal and 
+adaptation rules that keep proximal and 
 distal inputs within desired working regimes.
 Learning correlations between distinct
 synaptic or compartmental inputs is
-as standard task for Hebbian-type learning,
+as a standard task for Hebbian-type learning,
 which implies that the here proposed framework
 is based not on supervised, but on biologically
-viable unsupevised learning schemes.
+viable unsupervised learning schemes.
 
 The proximal input current $I_p$ is a linear 
 projection of the proximal input space. 
@@ -824,12 +915,10 @@ synapses, e.g.\ by facilitating spike initiation.
 While some research on cortical circuits suggests the possibility of
 generic and scalable principles that apply to different cortical
 regions and their functionality \citep{Douglas2007,George2009,Larkum2013},
-it is also well known that the anatomical properties of pyramidal neurons, in particular
-the dendritic structure, varies significantly across cortical regions 
+it is also well known that the anatomical properties of pyramidal neurons, in particular the dendritic structure, varies significantly across cortical regions 
 \citep{Fuster1973,Funahashi1989}. More specifically, going from lower to higher areas of
 the visual pathway, one can observe a significant increase of spines in the
-basal dendritic tree \citep{Elston1997,Elston2000}, which can be associated to the
-fact that neurons in higher cortical areas generally encode more complex or even
+basal dendritic tree \citep{Elston1997, Elston2000}, which can be associated with the fact that neurons in higher cortical areas generally encode more complex or even
 multi-sensory information, requiring the integration of activity from a higher number
 and potentially more distal neurons \citep{Elston2003,Luebke2017}.
 
@@ -839,8 +928,7 @@ a large effect on the results of our model, see
 Fig.~\ref{fig_corr_dimension_scaling}--\ref{fig:classification_correlation},
 as long as the homeostatic processes provided weight normalization.
 
-Apart from variations in the number of spines, variability can
-also be observed within the dendritic structure itself 
+Apart from variations in the number of spines, variability can also be observed within the dendritic structure itself 
 \citep{Spruston2008,Ramaswamy2015}. Such differences obviously affect
 the internal dynamics of the integration of synaptic inputs. 
 Given the phenomenological nature of our neuron model, 
@@ -849,7 +937,7 @@ the diverse dynamical properties that can arise from the dendritic structure
 \citep{Hausser2000}.
 The two models tested in our study can be regarded as two extreme cases,
 where the point neuron represents a completely linear superposition of inputs 
-and the compartment model being strongly  nonlinear with respect to proximal
+and the compartment model being strongly nonlinear with respect to proximal
 and distal inputs. In principle, pyramidal structures could also exhibit
 properties in between, where the resulting plasticity processes would show
 a mixture between the classical point neuron behavior (e.g.\ if a 
@@ -868,8 +956,8 @@ are formed. However, as previous works have indicated,
 random top-down weights are generically sufficient 
 for successful credit assignment and learning tasks
 \citep{Lillicrap2016,Guerguiev2017}.
-We therefore expect that our results can be
-transferred also to deep network structures, 
+Therefore, we expect that our results can be
+also transferred to deep network structures, 
 for which plasticity is classically guided 
 by local errors between top-down and bottom-up signals.
 
@@ -986,7 +1074,7 @@ cover a region of input states for which the described
 effects can take place. As a counterexample, one could 
 imagine that the input samples only covered a flat area of 
 $\mathcal{L}_p$, as for example in Fig.~\ref{fig:obj_func}B 
-in the lower left quadrant, leading to a zero average gradient. This 
+in the lower-left quadrant, leading to a zero average gradient. This 
 is prevented, however, by the homeostatic processes 
 acting simultaneously on the gains
 and biases, making sure that the marginal distributions of $I_p$ and
@@ -1008,7 +1096,7 @@ The authors declare that the research was conducted in the absence of any commer
 
 Both authors, F.S. and C.G., contributed equally to the
 writing and review of the manuscript. F.S. provided the code,
-ran the simulations and prepared the figures.
+ran the simulations, and prepared the figures.
 
 %\section*{Funding}
 %Details of all funding sources should be provided, including grant numbers if applicable. Please ensure to add all necessary funding information, as after publication this is no longer possible.
@@ -1018,7 +1106,7 @@ ran the simulations and prepared the figures.
 %---------------------------------------%
 
 The authors acknowledge the financial support of
-the German research foundation (DFG)
+the German Research Foundation (DFG)
 %\section*{Supplemental Data}
 % \href{http://home.frontiersin.org/about/author-guidelines#SupplementaryMaterial}{Supplementary Material} 
 % should be uploaded separately on submission, if there are Supplementary Figures, 

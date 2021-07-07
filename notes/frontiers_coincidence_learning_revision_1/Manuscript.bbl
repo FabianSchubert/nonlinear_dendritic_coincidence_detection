@@ -1,4 +1,4 @@
-\begin{thebibliography}{42}
+\begin{thebibliography}{47}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -11,6 +11,13 @@
 \providecommand{\bibAnnote}[2]{%
   \begin{quotation}\noindent\textsc{Key:} #1\\
   \textsc{Annotation:}\ #2\end{quotation}}
+
+\bibitem[{Bell and Sejnowski(1995)}]{Bell_1995}
+Bell, A.~J. and Sejnowski, T.~J. (1995).
+\newblock {An Information-maximisation approach to blind separation and blind
+  deconvolution}.
+\newblock \emph{Neural Computation} 7, 1129--1159
+\bibAnnoteFile{Bell_1995}
 
 \bibitem[{Bengio(2014)}]{Bengio2014}
 Bengio, Y. (2014).
@@ -43,6 +50,13 @@ Branco, T. and H{\"{a}}usser, M. (2011).
 \newblock \emph{Neuron} 69, 885--892.
 \newblock \doi{10.1016/j.neuron.2011.02.006}
 \bibAnnoteFile{Branco2011}
+
+\bibitem[{Cannon and Miller(2017)}]{cannon2017stable}
+Cannon, J. and Miller, P. (2017).
+\newblock {Stable Control of Firing Rate Mean and Variance by Dual Homeostatic
+  Mechanisms}.
+\newblock \emph{The Journal of Mathematical Neuroscience} 7, 1
+\bibAnnoteFile{cannon2017stable}
 
 \bibitem[{Clopath et~al.(2010)Clopath, B{\"{u}}sing, Vasilaki, and
   Gerstner}]{Clopath2010}
@@ -189,6 +203,16 @@ Intrator, N. and Cooper, L.~N. (1992).
 \newblock \doi{10.1016/j.tins.2012.11.006}
 \bibAnnoteFile{Larkum2013}
 
+\bibitem[{Larkum et~al.(1999)Larkum, Kaiser, and Sakmann}]{Larkum1999}
+Larkum, M.~E., Kaiser, K. M.~M., and Sakmann, B. (1999).
+\newblock {Calcium electrogenesis in distal apical dendrites of layer 5
+  pyramidal cells at a critical frequency of back-propagating action
+  potentials}.
+\newblock \emph{Proceedings of the National Academy of Sciences} 96,
+  14600--14604.
+\newblock \doi{10.1073/PNAS.96.25.14600}
+\bibAnnoteFile{Larkum1999}
+
 \bibitem[{Larkum et~al.(2009)Larkum, Nevian, Sandier, Polsky, and
   Schiller}]{Larkum2009}
 Larkum, M.~E., Nevian, T., Sandier, M., Polsky, A., and Schiller, J. (2009).
@@ -232,6 +256,15 @@ Lillicrap, T.~P., Cownden, D., Tweed, D.~B., and Akerman, C.~J. (2016).
 \newblock \emph{Nature Communications} 7, 1--10.
 \newblock \doi{10.1038/ncomms13276}
 \bibAnnoteFile{Lillicrap2016}
+
+\bibitem[{Linsker(1986)}]{Linsker1986}
+Linsker, R. (1986).
+\newblock {From basic network principles to neural architecture: emergence of
+  orientation-selective cells.}
+\newblock \emph{Proceedings of the National Academy of Sciences of the United
+  States of America} 83, 8390.
+\newblock \doi{10.1073/PNAS.83.21.8390}
+\bibAnnoteFile{Linsker1986}
 
 \bibitem[{Luebke(2017)}]{Luebke2017}
 Luebke, J.~I. (2017).
@@ -292,23 +325,12 @@ Schubert, F. and Gros, C. (2021).
 \newblock \doi{10.3389/FNCOM.2021.587721}
 \bibAnnoteFile{schubert2021local}
 
-\bibitem[{Shai et~al.(2015{\natexlab{a}})Shai, Anastassiou, Larkum, and
-  Koch}]{Shai2015}
-Shai, A.~S., Anastassiou, C.~A., Larkum, M.~E., and Koch, C.
-  (2015{\natexlab{a}}).
+\bibitem[{Shai et~al.(2015)Shai, Anastassiou, Larkum, and Koch}]{Shai2015}
+Shai, A.~S., Anastassiou, C.~A., Larkum, M.~E., and Koch, C. (2015).
 \newblock {Physiology of Layer 5 Pyramidal Neurons in Mouse Primary Visual
   Cortex: Coincidence Detection through Bursting}.
 \newblock \emph{PLOS Computational Biology} 11
 \bibAnnoteFile{Shai2015}
-
-\bibitem[{Shai et~al.(2015{\natexlab{b}})Shai, Anastassiou, Larkum, and
-  Koch}]{Shai_2015}
-Shai, A.~S., Anastassiou, C.~A., Larkum, M.~E., and Koch, C.
-  (2015{\natexlab{b}}).
-\newblock {Physiology of Layer 5 Pyramidal Neurons in Mouse Primary Visual
-  Cortex: Coincidence Detection through Bursting}.
-\newblock \emph{PLOS Computational Biology} 11
-\bibAnnoteFile{Shai_2015}
 
 \bibitem[{Sj{\"{o}}str{\"{o}}m and H{\"{a}}usser(2006)}]{Sjoestroem2006}
 Sj{\"{o}}str{\"{o}}m, P.~J. and H{\"{a}}usser, M. (2006).
@@ -341,6 +363,13 @@ Stuart, G.~J. and H{\"{a}}usser, M. (2001).
 \newblock \doi{10.1038/82910}
 \bibAnnoteFile{Stuart2001}
 
+\bibitem[{Triesch(2007)}]{Triesch_2007}
+Triesch, J. (2007).
+\newblock {Synergies Between Intrinsic and Synaptic Plasticity Mechanisms}.
+\newblock \emph{Neural Computation} 19, 885--909.
+\newblock \doi{10.1162/neco.2007.19.4.885}
+\bibAnnoteFile{Triesch_2007}
+
 \bibitem[{Urbanczik and Senn(2014)}]{Urbanczik2014}
 Urbanczik, R. and Senn, W. (2014).
 \newblock {Learning by the Dendritic Prediction of Somatic Spiking}.
@@ -356,5 +385,12 @@ Weissenberger, F., Gauy, M.~M., Lengler, J., Meier, F., and Steger, A. (2018).
 \newblock \emph{Scientific Reports} 8, 4609.
 \newblock \doi{10.1038/s41598-018-22781-0}
 \bibAnnoteFile{Weissenberger2018}
+
+\bibitem[{Yger and Gilson(2015)}]{Yger2015}
+Yger, P. and Gilson, M. (2015).
+\newblock {Models of Metaplasticity: A Review of Concepts}.
+\newblock \emph{Frontiers in Computational Neuroscience} 9, 138.
+\newblock \doi{10.3389/FNCOM.2015.00138}
+\bibAnnoteFile{Yger2015}
 
 \end{thebibliography}

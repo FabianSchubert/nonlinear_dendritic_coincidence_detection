@@ -4,44 +4,44 @@ The top-level auxiliary file: Manuscript.aux
 The style file: frontiersinSCNS_ENG_HUMS.bst
 Database file #1: Manuscript.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 42 entries,
+You've used 47 entries,
             3029 wiz_defined-function locations,
-            959 strings with 14085 characters,
-and the built_in function-call counts, 27382 in all, are:
-= -- 2407
-> -- 1282
-< -- 24
-+ -- 601
-- -- 343
-* -- 2012
-:= -- 4081
-add.period$ -- 119
-call.type$ -- 42
-change.case$ -- 330
-chr.to.int$ -- 43
-cite$ -- 84
-duplicate$ -- 1807
-empty$ -- 1930
-format.name$ -- 480
-if$ -- 5556
-int.to.chr$ -- 2
+            1001 strings with 15136 characters,
+and the built_in function-call counts, 30188 in all, are:
+= -- 2661
+> -- 1358
+< -- 29
++ -- 632
+- -- 364
+* -- 2207
+:= -- 4515
+add.period$ -- 133
+call.type$ -- 47
+change.case$ -- 362
+chr.to.int$ -- 48
+cite$ -- 94
+duplicate$ -- 2010
+empty$ -- 2165
+format.name$ -- 518
+if$ -- 6127
+int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 400
-newline$ -- 300
-num.names$ -- 168
-pop$ -- 844
+missing$ -- 443
+newline$ -- 334
+num.names$ -- 188
+pop$ -- 906
 preamble$ -- 1
-purify$ -- 282
+purify$ -- 309
 quote$ -- 0
-skip$ -- 865
+skip$ -- 943
 stack$ -- 0
-substring$ -- 1253
-swap$ -- 883
+substring$ -- 1425
+swap$ -- 978
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 378
+type$ -- 423
 warning$ -- 0
-while$ -- 188
+while$ -- 212
 width$ -- 0
-write$ -- 674
+write$ -- 752
